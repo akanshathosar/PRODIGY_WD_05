@@ -4,7 +4,7 @@ A sleek and functional **Weather Application** built as **Task 5** for the **Web
 
 This app allows users to get **real-time weather information** for any city using the **OpenWeatherMap API** and includes a responsive UI for an optimal user experience.
 
-🔗 [Live Demo](https://gauri0304.github.io/PRODIGY_WD_05/)
+🔗 [Live Demo] (https://akanshathosar.github.io/PRODIGY_WD_05/)
 
 ---
 
