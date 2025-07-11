@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="day">
+  <!-- Background video -->
+  <div id="animatedBackground">
+    <video id="backgroundVideo" autoplay muted loop playsinline>
+      <source src="day.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="dashboard">
+    <!-- Search -->
+    <div class="search-bar">
+      <input id="city-input" type="search" placeholder="Enter city name" />
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+      <button id="locateMe">📍 Use My Location</button>
+    </div>
+
+    <!-- Current Weather -->
+    <section class="current-weather">
+      <div class="weather-info">
+        <h2 id="location">🌍 Location</h2>
+        <div class="temp-main" id="temperature">°C</div>
+        <!-- Replace this inside .current-weather -->
+        <div><img id="weatherIcon" class="weather-icon" src="icons/sunny.svg" alt="Weather Icon" /></div>
+        <div id="description">
+          ☁️ Condition<br>
+          <small>High: --° | Low: --°</small>
+        </div>
+        <div id="windText">💨 Wind: --</div>
+      </div>
+      <div id="compassContainer">
+        <div id="compass">
+          <div id="needle"></div>
+          <div class="directions">
+            <span class="north">N</span><span class="northeast">NE</span><span class="east">E</span><span
+              class="southeast">SE</span>
+            <span class="south">S</span><span class="southwest">SW</span><span class="west">W</span><span
+              class="northwest">NW</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Panel -->
+    <section class="metrics">
+      <div id="weatherDetails" class="metric-card"></div>
+      <div id="weatherSun" class="metric-card"></div>
+    </section>
+
+    <!-- Hourly Forecast -->
+    <section class="forecast">
+      <h3>🕒 Hourly Forecast</h3>
+      <div class="scroll-panel" id="hourlyForecast"></div>
+    </section>
+
+    <!-- Weekly Forecast -->
+    <section class="forecast">
+      <h3>📆 5-Day Forecast</h3>
+      <div class="scroll-panel weekly" id="weeklyForecast"></div>
+    </section>
+
+    <!-- Past Weather -->
+    <section class="forecast">
+      <h3>⏪ Past 3 Days</h3>
+      <div class="scroll-panel" id="pastDaysContainer"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
